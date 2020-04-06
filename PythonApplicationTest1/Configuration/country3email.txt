@@ -1,0 +1,19 @@
+{
+	"addresses": [
+		{
+			"name": "joe",
+			"email": "joe@country3.com",
+			"role": "to"
+		},
+		{
+			"name": "al",
+			"email": "al@country3.com",
+			"role": "cc"
+		},
+		{
+			"name": "jack",
+			"email": "jack@country3.com",
+			"role": "ccn"
+		}
+	]
+}

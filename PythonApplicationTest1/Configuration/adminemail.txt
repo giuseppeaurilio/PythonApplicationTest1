@@ -1,0 +1,9 @@
+{
+	"addresses": [
+		{
+			"name": "johndoe",
+			"email": "johndoe@country16.com",
+			"role": "to"
+		}
+	]
+}

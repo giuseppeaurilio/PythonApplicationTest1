@@ -1,0 +1,7 @@
+Insicure people wanring on {country_id}
+Total population {totpop}
+variation {variation}
+
+Please verify
+
+Best regards

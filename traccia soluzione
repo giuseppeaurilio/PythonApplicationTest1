@@ -1,0 +1,40 @@
+
+Some comments to my solution:
+0. solution was developed in Microsoft Visual Studio Community 2019 IDE for my convenience.
+
+1. function initializeCountriesStructure is really slow. The bottleneck is the call to the service https://api.hungermapdata.org/swe-notifications/region/{region_id}/country. 
+To increase performance, it can be  executed just at start up, but in this way data changes on CSV files are not considered until next application restart.
+In alternative, an yearly check can be implemented.
+
+2. initializeCountriesStructure function can be optimized with the use of API https://api.hungermapdata.org/swe-notifications/country/{country_id}/regions, 
+but at the present moment i can't get a properly working solution.
+
+3.In the fili INI, if the parameter testMode = False, some mock data are considered: 
+Mock data are part  of the solution, and the section [TESTMODE] of the file ini has parameters to use them
+
+Unit tests (test.py) use this mock files and need testMode = True in the ini file; following the expected results of unit tests:
+country: 1, regioncount: 3, totpop: 60  
+country: 2, regioncount: 3, totpop: 150  
+country: 3, regioncount: 2, totpop: 150  
+country: 4, regioncount: 1, totpop: 90 
+country: 16, regioncount: 1, totpop: 0 
+
+country: 1; d0: 30; d30: 10; var: +33.33; -> WARNING
+country: 2; d0: 30; d30: 50; var: -13.33; -> OK
+country: 3; d0: 20; d30: 15; var: +3.33; -> OK
+country: 4; d0: 10; d30: 12 ; var: -2.22; -> OK
+country: 16; d0: 0; d30: 0; var:0; -> OK
+
+5.The checkFoodSecurity function runs periodically, based on the parameter runtimesecondsinterval in the file ini.
+
+6. email addresses are stored in txt file via json data. 
+These info can be moved to other media such as DB. 
+The folder containing txt files can be configured from INI file, property emailaddressespath
+
+7. the code for sending email is commented (CountryController.py line 106)
+
+Other known possible improvements:
+application error are not managed. 
+error communication with API are not managed
+SMTP usernameand password must not be stored in ini file
+apiservices URI can be moved to a configuration file.

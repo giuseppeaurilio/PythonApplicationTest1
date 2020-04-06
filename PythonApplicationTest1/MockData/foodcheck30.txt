@@ -1,0 +1,42 @@
+[
+	{
+		"region_id": 272,
+		"food_insecure_people": 3
+	},
+	{
+		"region_id": 273,
+		"food_insecure_people": 3
+	},
+	{
+		"region_id": 274,
+		"food_insecure_people": 4
+	},
+	{
+		"region_id": 275,
+		"food_insecure_people": 15
+	},
+	{
+		"region_id": 276,
+		"food_insecure_people": 15
+	},
+	{
+		"region_id": 277,
+		"food_insecure_people": 20
+	},
+	{
+		"region_id": 278,
+		"food_insecure_people": 10
+	},
+	{
+		"region_id": 279,
+		"food_insecure_people": 5
+	},
+	{
+		"region_id": 280,
+		"food_insecure_people": 12
+	},
+	{
+		"region_id": 467,
+		"food_insecure_people": 0
+	}
+]
